@@ -44,7 +44,7 @@
                             <transformers>
                                 <transformer implementation=
                                                      "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>org.example.Main</mainClass>
+                                    <mainClass>Unit-tests.Classes</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
