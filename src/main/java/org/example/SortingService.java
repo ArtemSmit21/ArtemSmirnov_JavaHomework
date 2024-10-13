@@ -3,7 +3,7 @@ package org.example;
 import java.util.List;
 
 /**
- * "Сервис" для сортировке всеми возможными методами
+ * "Сервис" для сортировки всеми возможными методами
  * Цель: сделать код в соответсвии с SOLID
  */
 public class SortingService {
