@@ -1,16 +1,33 @@
 package org.example;
 
 import java.util.List;
-import java.util.logging.Logger;
 
+/**
+ * "Сервис" для сортировке всеми возможными методами
+ * Цель: сделать код в соответсвии с SOLID
+ */
 public class SortingService {
 
+    /**
+     * Здесь храним список с интересующими нас наследниками BaseSortings
+     */
     private final List<BaseSortings> sortings;
 
     public SortingService(List<BaseSortings> sortings) {
         this.sortings = sortings;
     }
 
+    /**
+     * @param list       исходный массив
+     * @param typeOfSort тип сортировки
+     * @return массив пустой - IllegalArgumentException,
+     * массив переполнен - IndexArgumentException(эту ошибку не выкидываем в надежде того,
+     * что код может закончиться успешно (можно залогировать и т.д.)),
+     * иначе вызываем сортировку массиве на определенном классе необходимой сортиовки
+     *
+     * Также, если пользователь выбирает еще не реализованную сортировку,
+     * выкидываем ClassCastException
+     */
     public List<Integer> sort(List<Integer> list, TypeOfSort typeOfSort) {
         boolean foundSorting = false;
 

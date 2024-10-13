@@ -4,15 +4,26 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.example.Values.MAXCOUNT;
+import static org.example.MaxValues.MAXCOUNT;
 
+/**
+ * Класс с сортировкой слиянием
+ */
 public class MergeSort implements BaseSortings {
 
+    /**
+     * @return enum значение - MERGE
+     */
     @Override
     public TypeOfSort type() {
         return TypeOfSort.MERGE;
     }
 
+    /**
+     * @param list - массив для сортировки
+     * @return отсортированный массив(копия исходного) с учетом того,
+     * что он может быть пустым или слишком большим
+     */
     @Override
     public List<Integer> sort(List<Integer> list) {
         if (list.isEmpty()) {
