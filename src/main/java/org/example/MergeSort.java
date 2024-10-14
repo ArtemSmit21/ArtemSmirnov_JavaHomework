@@ -12,6 +12,11 @@ import static org.example.MaxValues.MAXCOUNT;
 public class MergeSort implements BaseSortings {
 
     /**
+     * приватная копия динамического массива
+     */
+    private List<Integer> listCopy;
+
+    /**
      * @return enum значение - MERGE
      */
     @Override
@@ -30,7 +35,7 @@ public class MergeSort implements BaseSortings {
             throw new IllegalArgumentException("Динамический массив пуст!");
         }
 
-        var listCopy = new ArrayList<>(list);
+        listCopy = new ArrayList<>(list);
 
         if (listCopy.size() > MAXCOUNT.getValue()) {
             throw new IndexOutOfBoundsException("Превышено максимально возможное количество" +

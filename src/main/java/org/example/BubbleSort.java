@@ -11,6 +11,11 @@ import static org.example.MaxValues.MAXCOUNT;
 public class BubbleSort implements BaseSortings {
 
     /**
+     * приватная копия динамического массива
+     */
+    private List<Integer> listCopy;
+
+    /**
      * @return enum значение - BUBBLE
      */
     @Override
@@ -28,7 +33,7 @@ public class BubbleSort implements BaseSortings {
         if (list.isEmpty()) {
             throw new IllegalArgumentException("Динамический массив пуст!");
         }
-        var listCopy = new ArrayList<>(list);
+        listCopy = new ArrayList<>(list);
         if (listCopy.size() > MAXCOUNT.getValue()) {
             throw new IndexOutOfBoundsException("Превышено максимально возможное количество" +
                     " элементов в динамическом массиве!");
