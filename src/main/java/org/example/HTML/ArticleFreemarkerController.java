@@ -45,7 +45,7 @@ public class ArticleFreemarkerController implements Controller {
     getAllArticles();
   }
 
-  public void getAllArticles() {
+  private void getAllArticles() {
     service.get(
         "/",
         (Request request, Response response) -> {
