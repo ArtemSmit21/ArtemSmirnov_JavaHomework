@@ -94,7 +94,7 @@ public class ArticleController implements Controller {
     );
   }
 
-  public void getAllArticles() {
+  private void getAllArticles() {
     service.get(
         "/api/all-articles",
         (Request request, Response response) -> {
@@ -117,7 +117,7 @@ public class ArticleController implements Controller {
     );
   }
 
-  public void deleteArticle() {
+  private void deleteArticle() {
     service.delete(
         "/api/delete-article/:articleId",
         (Request request, Response response) -> {
@@ -141,7 +141,7 @@ public class ArticleController implements Controller {
     );
   }
 
-  public void updateArticle() {
+  private void updateArticle() {
     service.put(
         "api/update-article/:articleId",
         (Request request, Response response) -> {
