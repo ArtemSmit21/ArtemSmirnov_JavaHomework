@@ -34,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class ArticleServiceImplTestcontainersTest {
 
   @Container
-  public static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:latest");
+  public static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:13");
 
   private static Jdbi jdbi;
 
