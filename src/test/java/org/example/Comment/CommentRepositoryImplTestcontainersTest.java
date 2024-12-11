@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Testcontainers
 class CommentRepositoryImplTestcontainersTest {
   @Container
-  public static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:13");
+  public static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:latest");
 
   private static Jdbi jdbi;
 
