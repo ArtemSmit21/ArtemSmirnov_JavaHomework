@@ -2,10 +2,6 @@ package org.example.message;
 
 import java.util.Map;
 
-/**
- * Класс для хранения message и его редактирования
- * (потокобезопасный)
- */
 public class Message {
 
   private Map<String, String> content;
