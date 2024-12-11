@@ -83,6 +83,7 @@ class ArticleFreemarkerControllerTestcontainersTest {
         )
     );
     application.start();
+    service.awaitInitialization();
   }
 
   @AfterEach
