@@ -53,7 +53,7 @@ class ApplicationTest {
 
   @Test
   @DisplayName("This test check correct work enrichment service in concurrent environment")
-  void shouldSucceedEnrichmentInConcurrentEnvironmentSuccessfully() throws InterruptedException {
+  void test() throws InterruptedException {
     List<Map<String, String>> enrichmentResults = new CopyOnWriteArrayList<>();
     ExecutorService executorService = Executors.newFixedThreadPool(5);
     CountDownLatch latch = new CountDownLatch(5);
