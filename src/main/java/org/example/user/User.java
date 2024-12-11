@@ -2,9 +2,6 @@ package org.example.user;
 
 import org.example.exceptions.NullNameException;
 
-/**
- * Класс с юзерами (потокобезопасный)
- */
 public class User {
   public String firstName;
   public String lastName;
