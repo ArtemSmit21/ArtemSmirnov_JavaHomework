@@ -82,6 +82,7 @@ class ArticleControllerTestcontainersTest {
         )
     );
     application.start();
+    service.awaitInitialization();
   }
 
   @AfterEach
